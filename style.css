@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    margin: 0;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Lexend Deca", sans-serif;
+
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start; /* Align items to the start to avoid excessive space */
+    margin: 20px;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.col1, .col2, .col3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px; /* Reduce padding */
+    height: auto; /* Allow height to adjust based on content */
+    min-width: 200px; /* Ensure a minimum width to prevent overflow */
+}
+
+.col1 {
+    background-color: #E28525;
+}
+
+.col2 {
+    background-color: #016972;
+}
+
+.col3 {
+    background-color: #00403F;
+}
+
+h2 {
+    color: #F2F2F2;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Big Shoulders Display", sans-serif;
+
+}
+
+p {
+    color: #ebebebf3;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.col1 a, .col2 a, .col3 a {
+    display: inline-block;
+    width: 60%; /* Adjust width */
+    max-width: 150px; /* Set a maximum width */
+    padding: 8px 0; /* Adjust padding for height control */
+    text-align: center; /* Center text in the button */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+    border: 2px solid transparent; /* Default transparent border */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin-top: 10px; /* Add space between content and button */
+}
+
+
+/* Specific column button styles */
+.col1 a {
+    background-color: #F2F2F2; /* White background for col1 */
+    color: #E28525; /* Text color matches col1 background */
+}
+
+.col2 a {
+    background-color: #F2F2F2; /* White background for col2 */
+    color: #016972; /* Text color matches col2 background */
+}
+
+.col3 a {
+    background-color: #F2F2F2; /* White background for col3 */
+    color: #00403F; /* Text color matches col3 background */
+}
+
+/* Hover effects for all columns */
+.col1 a:hover, .col2 a:hover, .col3 a:hover {
+    background-color: transparent; /* Make background transparent on hover */
+    color: #F2F2F2; /* Change text color to white */
+    border: 2px solid #F2F2F2; /* Add white border on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column; /* Stack columns vertically */
+        max-width: 100%; /* Use full width */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0; /* Remove margin to avoid extra space */
+        padding: 0; /* Remove padding to avoid extra space */
+    }
+
+    .col1, .col2, .col3 {
+        width: 90%; /* Set a width percentage for better responsiveness */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    h2 {
+        font-size: 20px; /* Slightly smaller headings */
+        margin-bottom: 5px; /* Reduce bottom margin */
+        font-family: "Lexend Deca", system-ui;
+    }
+
+    p {
+        font-size: 12px; /* Smaller font size for paragraph */
+    }
+
+    a {
+        width: 100%; /* Full width for buttons on smaller screens */
+        text-align: center; /* Center text */
+        padding: 12px; /* Adjust padding for better touch target */
+        margin-top: 10px; /* Space between buttons and content */
+    }
+}
+
+@media (max-width: 480px) {
+    .col1, .col2, .col3 {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 10px;
+        margin-bottom: 5px; /* Reduce margin for paragraphs */
+    }
+
+    a {
+        padding: 10px; /* Further adjust padding for very small screens */
+        font-size: 12px; /* Adjust font size for small devices */
+    }
+}
